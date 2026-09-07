@@ -1,16 +1,25 @@
 import java.util.Scanner;
-import java.lang.String;
+import java.util.ArrayList;
 public class PrincipalCuenta{
-    public static void main(String args){    
-        String opcion = "";
+    private static ArrayList<Cuenta> listaCuentas;
+    public static void main(String[] args){    
+        int opcion = 0;
         Scanner scan = new Scanner(System.in);
         do{
             mostrarMenu();
-            opcion = "10";
+            try{
+                opcion = scan.nextInt();
+                if(opcion != 10){
+                    switchCase(opcion);
+                }
+            }
+            catch(Exception error){
+                System.out.println("Debes digitar un numero entero");
+            }
             
-            
-        
-        }while(opcion != "10");
+        }while(opcion != 10);
+        scan.close();
+        System.out.println("Fin del programa");
     }
     private static void mostrarMenu(){
         System.out.println("====Menu====\n");
@@ -19,6 +28,53 @@ public class PrincipalCuenta{
         System.out.print("6. Depositar\n7.Retirar\n8.Consultar saldo\n9. Consultar estado de cuenta\n10.Salir\n");
         System.out.println("Opcion: ");
     }
-
+    private static void switchCase(int opcion){
+        switch (opcion){
+            case 1: 
+                crearCuenta();
+                break;
+            case 2:
+                conocerCuentasCreadas();
+                break;
+            case 3:
+                break;
+        }
+    }
+    //Opcion 1
+    private static void crearCuenta(){
+        double saldo;
+        String nombreCuentaHabiente = "";
+        Scanner scan = new Scanner(System.in);
+        System.out.println("==Crear Cuenta==");
+        System.out.print("Saldo incial: ");
+        System.out.println("\n");
+        try{
+            saldo = scan.nextDouble();
+        }
+        catch(Exception error){
+            System.out.println("Se debe de ingresar un valor numerico para el saldo inicial");
+            scan.next("Enter para regresar");
+            scan.close();
+            return;
+        }
+        System.out.print("Nombre de la cuenta habiente (opcional/enter): ");
+        nombreCuentaHabiente = scan.nextLine().trim();
+        Cuenta nuevaCuenta;
+        
+        if (nombreCuentaHabiente.equals("")){
+            nuevaCuenta = new Cuenta(saldo);
+        }
+        else{
+            nuevaCuenta = new Cuenta(nombreCuentaHabiente, saldo);
+        }
+        listaCuentas.add(nuevaCuenta);
+        System.out.println("Cuenta creada exitosamente");
+        scan.close();
+        return;
+    } 
+    //Opcion 2
+    private static void conocerCuentasCreadas(){
+        System.out.println("Cuentas creadas:\n" + Cuenta.getCantCuentasCreadas());
+    }
     
 }

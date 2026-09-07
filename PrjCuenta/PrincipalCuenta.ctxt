@@ -1,7 +1,11 @@
 #BlueJ class context
-#Sun Sep 06 16:22:55 CST 2026
+#Sun Sep 06 18:37:18 CST 2026
 comment0.target=PrincipalCuenta
 comment1.params=args
-comment1.target=void main(java.lang.String)
+comment1.target=void main(java.lang.String[])
 comment2.target=void mostrarMenu()
-numComments=3
+comment3.params=opcion
+comment3.target=void switchCase(int)
+comment4.target=void crearCuenta()
+comment5.target=void conocerCuentasCreadas()
+numComments=6

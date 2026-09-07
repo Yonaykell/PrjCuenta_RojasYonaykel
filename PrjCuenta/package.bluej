@@ -1,19 +1,22 @@
 #BlueJ package file
+dependency1.from=PrincipalCuenta
+dependency1.to=Cuenta
+dependency1.type=UsesDependency
 editor.fx.0.height=687
 editor.fx.0.width=1280
 editor.fx.0.x=0
 editor.fx.0.y=0
-objectbench.height=116
+objectbench.height=166
 objectbench.width=749
 package.divider.horizontal=0.6
-package.divider.vertical=0.7946577629382304
-package.editor.height=469
+package.divider.vertical=0.7111853088480802
+package.editor.height=419
 package.editor.width=1126
 package.editor.x=0
 package.editor.y=0
 package.frame.height=687
 package.frame.width=1280
-package.numDependencies=0
+package.numDependencies=1
 package.numTargets=2
 package.showExtends=true
 package.showUses=true
