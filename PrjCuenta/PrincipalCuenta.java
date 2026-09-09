@@ -115,17 +115,21 @@ public class PrincipalCuenta{
     //Opcion 3
     private static void listarCuentas(Scanner scan){
         scan.nextLine(); //limpiar
-        int idCuenta = 0;
-        System.out.println("==Estado de las cuentas==");
-
-        for (Cuenta cuenta : listaCuentas){
-            System.out.println("-----------------------------------");
-            System.out.println("Numero de cuenta: " + (idCuenta + 1));
-            System.out.println(cuenta.toString());
-            System.out.println("-----------------------------------\n//\\\\");
-            idCuenta ++;
+        if (listaCuentas.size() == 0){
+            System.out.println("===============\nNo hay cuentas registradas...");
         }
-
+        else{
+            int idCuenta = 0;
+            System.out.println("==Estado de las cuentas==");
+    
+            for (Cuenta cuenta : listaCuentas){
+                System.out.println("-----------------------------------");
+                System.out.println("Numero de cuenta: " + (idCuenta + 1));
+                System.out.println(cuenta.toString());
+                System.out.println("-----------------------------------\n//\\\\");
+                idCuenta ++;
+            }
+        }
         System.out.println("Enter para regresar...");
         scan.nextLine();
         return;
