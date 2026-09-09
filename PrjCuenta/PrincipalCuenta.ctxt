@@ -1,11 +1,27 @@
 #BlueJ class context
-#Sun Sep 06 18:37:18 CST 2026
+#Tue Sep 08 23:04:17 CST 2026
 comment0.target=PrincipalCuenta
 comment1.params=args
 comment1.target=void main(java.lang.String[])
+comment10.params=scan
+comment10.target=void retirar(java.util.Scanner)
+comment11.params=scan
+comment11.target=void consultarSaldo(java.util.Scanner)
+comment12.params=scan
+comment12.target=void consultarEstadoCuenta(java.util.Scanner)
 comment2.target=void mostrarMenu()
-comment3.params=opcion
-comment3.target=void switchCase(int)
-comment4.target=void crearCuenta()
-comment5.target=void conocerCuentasCreadas()
-numComments=6
+comment3.params=opcion scan
+comment3.target=void switchCase(int, java.util.Scanner)
+comment4.params=scan
+comment4.target=void crearCuenta(java.util.Scanner)
+comment5.params=scan
+comment5.target=void conocerCuentasCreadas(java.util.Scanner)
+comment6.params=scan
+comment6.target=void listarCuentas(java.util.Scanner)
+comment7.params=scan
+comment7.target=void seleccionarCuentaActual(java.util.Scanner)
+comment8.params=scan
+comment8.target=void asignarNombreCuentaHabiente(java.util.Scanner)
+comment9.params=scan
+comment9.target=void depositar(java.util.Scanner)
+numComments=13
